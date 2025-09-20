@@ -1,0 +1,464 @@
+@import url('https://fonts.cdnfonts.com/css/warcraft');
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+body {
+    background:#303030;
+    display:flex;
+    flex-direction: column;  
+
+}
+
+
+header {
+    display: flex;
+    margin: 10px 0 5px;
+    justify-content: center;
+     
+}
+
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+} 
+    
+h1 {
+    font-family: warcraft, sans-serif;
+    text-align: center;
+    font-size:50px;
+    text-decoration: underline;  
+    color:#1e5eb7;
+    text-shadow: 3px 2px #FAF139; 
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E0F1FF;
+    margin: 10px;
+    height:60px;
+    width:70%;
+    margin:auto;
+    border-radius: 10px;
+    
+}
+
+nav a {
+    
+    text-decoration: none;
+    margin-right:50px;
+    font-family: warcraft, sans-serif;
+    font-size: 26px;
+    color:black;
+    transition: 500ms;
+    
+}
+
+nav a:hover {
+    transform:translateY(5px);
+    transition: 500ms;
+    text-decoration: underline;
+    color:#0457cc;
+    background: #FAF139;
+    padding: 10px 23px;
+    border-radius: 10px;   
+}
+
+#main_container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    height:800px;
+    background-image: url(images/suramar.jpg); /* image found https://syrco.files.wordpress.com/2016/09/suramar3.jpg */
+}
+
+.welcome { 
+    text-align:justify;
+    background-color: #FAF139;
+    border: 2px solid #3898F9;
+    border-radius: 10px;
+    width:65%;
+    padding:5px 0 5px 50px;
+
+}
+
+.welcome p{
+    line-height: 1.5;
+    padding:10px;
+    width:80%;
+    
+}
+
+.welcome p::first-letter {
+    font-family:warcraft, sans-serif ;
+    color: white;
+    background-color: black;
+    box-shadow: 3px 3px red;
+    margin-right: 5px;
+    font-size: 2.5em;
+    float: left;
+}
+
+.video {
+    margin-top: 20px;
+}
+
+
+
+#pet_container {
+    display:flex;
+    justify-content: center;
+    background-image: url(images/hunter_pet.png); /* Image found https://images3.alphacoders.com/169/thumb-1920-169517.png */
+    margin-top: 20px;
+    
+}
+
+.table_container {
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    background-color: aliceblue;
+    width:auto;
+    margin-top: 10px;
+
+}
+
+table {
+    width:auto;
+    border-collapse: collapse;
+    
+}
+
+table, td {
+    text-align: center;
+    border:2px solid black;
+    padding: 10px;
+}
+
+th {
+    background-color: #3898F9;
+    font-family: warcraft, sans-serif;
+    font-size:2em;
+    text-decoration: underline;
+    padding:10px;
+    color:black;
+    text-shadow: 2px 2px white;
+}
+
+tr:nth-child(odd) {
+    background-color:#FAF139 ;
+    
+}
+
+ul {
+    text-align: justify;
+    list-style: none;
+}
+
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    height:120px;
+    
+}
+
+.btn a {
+    font-family: warcraft, sans-serif;
+    font-size: 28px;
+    text-decoration: none;
+    color:black;
+    text-shadow: 2px 2px white;
+}
+
+button {
+    border-radius: 10px;
+    border: 2px solid #3898F9;
+    background-color: #FAF139;
+    width: 12em;
+    height:50px;
+    transition: 1s;
+    cursor: pointer;
+     
+}
+
+button:hover {
+    transform: translateY(-20px);
+    background-color: #3898F9;
+    border: 2px solid #FAF139;
+    transition: 1s, background-color 1s;
+    
+    
+}
+
+
+#form_container {
+    background-color: #FAF139;
+    display:flex; 
+    justify-content: flex-end;
+    background-image: url(images/hunter_pet.png); /* Image found https://images3.alphacoders.com/169/thumb-1920-169517.png */
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+     
+}
+
+/* trying out media query */
+@media screen and (max-width:1140px) {
+    
+    .form_container {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }   
+    
+}
+
+h2 {
+    font-family: warcraft, sans-serif;
+    font-size: 48px;
+    text-decoration: underline;
+    padding-top: 10px;
+    color: #1e5eb7;
+    text-shadow: 2px 2px #FAF139;
+}
+
+form {
+    text-align: center;
+    background-color: #FDD5A1;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding-bottom:10px;
+    
+    
+}
+
+#btn_submit, #btn_reset {
+    border: 1px solid #0457cc;
+    background-color: #FAF139;
+    padding: 10px 20px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: 1s; /* Controls the time the button takes to go back to it's position */
+    cursor: pointer;
+}
+
+#btn_submit:hover, #btn_reset:hover {
+    transform: translateY(-10px); /* when hover the sumbit moves up on the Y axis */
+    transition: 1s;
+    background-color: #0457cc;
+    border: 2px solid white;
+    color:white;
+
+}
+
+.details {
+    display:flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: left;
+    width:40em;
+}
+
+.details p{
+    color:red;
+    font-style: italic;
+    font-size: 12px;
+}
+
+input {
+   padding:5px;
+   margin-top:5px;
+       
+}
+
+textarea {
+    text-align: center;
+    background-color: rgba(201, 198, 198, 0.474);
+    
+}
+
+#map_container {
+    background-image: url(images/wow_map.jpg); /* Image found https://www.pxfuel.com/en/desktop-wallpaper-zivbs */
+    background-size: cover;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content:center;
+    
+}
+
+
+.contact_title {
+    text-align: center;
+    margin-bottom: 40px;
+   
+}
+
+.contact_title h2 {
+    font-size: 4em;
+    color:#0457cc;
+    text-shadow: 2px 2px white;
+}
+
+
+
+.contact_sect {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    
+}
+
+.contact_col {
+    text-align: center;
+    width:33%;
+    background-color:#faf039c6;
+    margin: 40px;
+    margin-left:10px;
+    padding: 20px;
+    border: 2px solid #3898F9;
+    border-radius: 10px;
+    
+}
+
+.contact_col p {
+    padding-bottom: 10px;
+}
+
+
+
+span {
+    font-family: warcraft, sans-serif;
+    font-size: 2em;
+    text-decoration: underline;
+    color:#0457cc;
+    text-shadow: 2px 2px white;
+}
+
+.contact_col a span {
+    color:#0457cc;
+    text-shadow: 2px 2px white;
+    text-decoration: none;
+}
+
+.contact_col a {
+    color:black;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width:1140px) {
+
+    .map_container {
+        height: 100vh;
+    }
+
+    .contact_sect{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .contact_col {
+        margin: 10px 0 10px;
+    }
+
+    .contact_title {
+        display:none;
+    }
+
+    
+}
+
+#about_sect {
+    background-image: url(images/world_screenshot.png); /* image found https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fqjzu5ut8gob61.png */
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    
+}
+
+.about_col {
+    width:32%;
+    height:60px;
+    background-color:#8dbef3;
+    margin:10px;
+    border: 2px solid #FAF139;
+    border-radius: 10px;
+    transition: 2s;
+}
+
+.about_col h3 {
+    text-align: center;
+    font-family: warcraft, sans-serif;
+    font-size: 2em;
+    padding:10px 0 10px 0;
+    text-shadow: 2px 2px white;
+    
+ 
+}
+
+.about_col:hover {
+    height:200px;
+    transition: 1s;
+} /* setting height of the container, using transition the delay it drops down when hovered */
+
+.text {
+    color: rgba(0, 0, 0, 0);
+    transition: 1s;
+    padding: 5px;
+}
+
+.text:hover {
+    color:rgb(0, 0, 0);
+    cursor:pointer;  
+}
+
+.text p {
+    text-align: center;
+}
+
+
+.guarantee_logo {
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+footer {
+    background-color: #E0F1FF;
+    display: flex;
+    justify-content: flex-end;
+    padding:10px;
+       
+}
+
+footer p {
+    font-size: 12px;
+    font-variant: small-caps;
+}
+
+
+ 
+
